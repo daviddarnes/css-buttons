@@ -1,0 +1,83 @@
+/**
+ * Only for Safari and Chrome, IE can kiss my hemline (sorry Firefox).
+ * Also this is a work in progress, will improve as much as I can in my spare time.
+ */
+
+@import "mixins.less";
+
+body {
+	margin: 20% auto;
+	width: 285px;
+	font: 16px Georgia, serif;
+}
+
+a {
+	opacity: 0.3;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: url('http://david.darn.es/wp-content/themes/david.darn.es/imgs/logo_gray.png');
+	width: 56px;
+	height: 57px;
+	.transition(all .2s ease-in-out);
+}
+a:hover {
+	opacity: 1;
+}
+
+.button {
+	position: relative;
+	@button-background: #333;
+	background: @button-background;
+	height: 80px;
+	width: 80px;
+	border: 1px solid #444;
+	float: left;
+	margin: 40%;
+	.border-radius(10000px);
+	@button-shadow: 0 1px 1px rgba(0,0,0,.3), inset 0 2px 5px rgba(255,255,255,0.25), inset 0 -2px 5px rgba(0,0,0,1), inset 0 -1px 2px rgba(0,0,0,.2);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(bottom, center, 0);
+}
+.button:hover {
+	.scale(1.1);
+}
+.button:active {
+	.scale(1);
+}
+.button:before {
+	content: "::";
+	letter-spacing: 3px;
+	position: absolute;
+	color: #fff;
+	font-size: 2.25em;
+	line-height: 40%;
+	height: 30%;
+	width: 30%;
+	left: 34.5%;
+	top: 35%;
+	text-shadow:0 -1px 1px rgba(0,0,0,.9),0 -1px 1px rgba(0,0,0,.5),0 1px 1px rgba(255,255,255,0.2);
+}
+.button:after {
+	background: rgba(0,0,0,0.05);
+	content: "";
+	display: block;
+	position: absolute;
+	height: 70%;
+	width: 70%;
+	border-radius: 100%;
+	@after-button-shadow: 0 2px 5px rgba(255,255,255,0.17),0 -2px 5px rgba(0,0,0,0.5),0 0 0 1px rgba(0,0,0,.2),inset 0 -2px 8px rgba(0,0,0,0.4);
+	.box-shadow(@after-button-shadow);
+	top: 15.5%;
+	left: 15.5%;
+}
+.button.blue {
+	background: #4099FF;
+	border-color: darken(#4099FF, 10%);
+}
+footer {
+	padding-left: 30px;
+	text-align: center;
+}
