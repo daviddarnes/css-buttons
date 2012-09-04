@@ -1,14 +1,23 @@
 /**
- * Only for Safari and Chrome, IE can kiss my hemline (sorry Firefox).
- * Also this is a work in progress, will improve as much as I can in my spare time.
+ * Works in the latest version of:
+ 	• Google Chrome
+ 	• Firefox
+ 	• Safari
+ 	• IE
+ 	• and now Opera!
+
+ * Additionally this is a work in progress, will improve as much as I can in my spare time.
  */
 
 @import "mixins.less";
 
 body {
-	margin: 20% auto;
-	width: 285px;
-	font: 16px Georgia, serif;
+	height: 100%;
+}
+
+section {
+	width: 600px;
+	margin: 150px auto;
 }
 
 a {
@@ -27,57 +36,210 @@ a:hover {
 }
 
 .button {
+	font: 16px Georgia, serif;
 	position: relative;
-	@button-background: #333;
-	background: @button-background;
+	float: left;
+	margin: 58px;
 	height: 80px;
 	width: 80px;
-	border: 1px solid #444;
-	float: left;
-	margin: 40%;
+	&:hover {
+		.scale(1.1);
+	}
+	&:active {
+		.scale(1);
+	}
+	&:after {
+		content: "::";
+		letter-spacing: 3px;
+		position: absolute;
+		color: #fff;
+		font-size: 2.25em;
+		line-height: 40%;
+		height: 30%;
+		width: 30%;
+		left: 34%;
+		top: 35%;
+		.backface-visibility(hidden);
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 71%;
+		width: 70%;
+		border-radius: 100%;
+		top: 15.5%;
+		left: 15.5%;
+	}
+}
+
+.button.twitter {
+	@button-colour: #0076be;
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
 	.border-radius(10000px);
-	@button-shadow: 0 1px 1px rgba(0,0,0,.3), inset 0 2px 5px rgba(255,255,255,0.25), inset 0 -2px 5px rgba(0,0,0,1), inset 0 -1px 2px rgba(0,0,0,.2);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
 	.transition(all .2s ease-in-out);
-	.transform-origin(bottom, center, 0);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
 }
-.button:hover {
-	.scale(1.1);
+
+.button.facebook {
+	@button-colour: #3b5998;
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
+	.border-radius(10000px);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
 }
-.button:active {
-	.scale(1);
+
+.button.dribbble {
+	@button-colour: #df2d72;
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
+	.border-radius(10000px);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
 }
-.button:before {
-	content: "::";
-	letter-spacing: 3px;
-	position: absolute;
-	color: #fff;
-	font-size: 2.25em;
-	line-height: 40%;
-	height: 30%;
-	width: 30%;
-	left: 34.5%;
-	top: 35%;
-	text-shadow:0 -1px 1px rgba(0,0,0,.9),0 -1px 1px rgba(0,0,0,.5),0 1px 1px rgba(255,255,255,0.2);
+
+.button.github {
+	@button-colour: #333;
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
+	.border-radius(10000px);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
 }
-.button:after {
-	background: rgba(0,0,0,0.05);
-	content: "";
-	display: block;
-	position: absolute;
-	height: 70%;
-	width: 70%;
-	border-radius: 100%;
-	@after-button-shadow: 0 2px 5px rgba(255,255,255,0.17),0 -2px 5px rgba(0,0,0,0.5),0 0 0 1px rgba(0,0,0,.2),inset 0 -2px 8px rgba(0,0,0,0.4);
-	.box-shadow(@after-button-shadow);
-	top: 15.5%;
-	left: 15.5%;
+
+.button.youtube {
+	@button-colour: #d80000;
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
+	.border-radius(10000px);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
 }
-.button.blue {
-	background: #4099FF;
-	border-color: darken(#4099FF, 10%);
+
+.button.google {
+	@button-colour: #cb4102;
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
+	.border-radius(10000px);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
 }
+
+
+
 footer {
-	padding-left: 30px;
+	clear: both;
+	width: 600px;
+	margin: 0 auto;
 	text-align: center;
 }

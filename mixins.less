@@ -275,6 +275,14 @@
           border-radius: @radius;
 }
 
+// Backface Visibility
+.backface-visibility(@visibility: hidden) {
+  -webkit-backface-visibility: @visibility;
+	 -moz-backface-visibility: @visibility;
+	  -ms-backface-visibility: @visibility;
+}
+
+
 // Drop shadows
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
   -webkit-box-shadow: @shadow;
@@ -334,12 +342,12 @@
        -o-transform: skew(@x, @y);
           transform: skew(@x, @y);
 }
-.transform-origin(@x, @y, @z) {
-  -webkit-transform-origin: @x @y @z;
-     -moz-transform-origin: @x @y @z;
-      -ms-transform-origin: @x @y @z;
-       -o-transform-origin: @x @y @z;
-          transform-origin: @x @y @z;
+.transform-origin(@x, @y) {
+  -webkit-transform-origin: @x @y;
+     -moz-transform-origin: @x @y;
+      -ms-transform-origin: @x @y;
+       -o-transform-origin: @x @y;
+          transform-origin: @x @y;
 }
 
 // Background clipping
