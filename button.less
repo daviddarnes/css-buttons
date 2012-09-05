@@ -1,15 +1,51 @@
-/**
+/*!
  * Name: CSS Button
  * Author: David Darnes 
  * Author url: http://david.darn.es
  * Tools: Made in Coda, Codekit and Less
- * Usage: Just copy this file and the mxins.less into your work folder and use a 
-   less @import in your main less file. To change the colour either change the 
-   colour referenced next to @button-colour or duplicate the whole class and 
+ * Usage: Just copy this file into your work folder and use a less @import 
+   in your main less file. To change the colour either change the colour 
+   referenced next to @button-colour or duplicate the whole class and 
    create as many colours as you like.
  */
 
-@import "mixins.less";
+// Mixins stuff
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+       -o-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+.backface-visibility(@visibility) {
+  -webkit-backface-visibility: @visibility;
+	 -moz-backface-visibility: @visibility;
+	  -ms-backface-visibility: @visibility;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.transform-origin(@x, @y) {
+  -webkit-transform-origin: @x @y;
+     -moz-transform-origin: @x @y;
+      -ms-transform-origin: @x @y;
+       -o-transform-origin: @x @y;
+          transform-origin: @x @y;
+}
 
 // This all the button structure and workings, doesn't need to be duplicated
 .button {
