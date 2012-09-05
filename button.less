@@ -1,0 +1,79 @@
+/**
+ * Name: CSS Button
+ * Author: David Darnes 
+ * Author url: http://david.darn.es
+ * Tools: Made in Coda, Codekit and Less
+ * Usage: Just copy this file and the mxins.less into your work folder and use a 
+   less @import in your main less file. To change the colour either change the 
+   colour referenced next to @button-colour or duplicate the whole class and 
+   create as many colours as you like.
+ */
+
+@import "mixins.less";
+
+// This all the button structure and workings, doesn't need to be duplicated
+.button {
+	font: 16px Georgia, serif;
+	position: relative;
+	float: left;
+	margin: 58px;
+	height: 80px;
+	width: 80px;
+	&:hover {
+		.scale(1.1);
+	}
+	&:active {
+		.scale(1);
+	}
+	&:after {
+		content: "::";
+		letter-spacing: 3px;
+		position: absolute;
+		color: #fff;
+		font-size: 2.25em;
+		line-height: 40%;
+		height: 30%;
+		width: 30%;
+		left: 34%;
+		top: 35%;
+		.backface-visibility(hidden);
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 71%;
+		width: 70%;
+		border-radius: 100%;
+		top: 15.5%;
+		left: 15.5%;
+	}
+}
+
+// Duplicate this class (including all its styles and pseudo elements) to make another colour. Then raname it to .button.twitter or something, along with the colour you want
+.button {
+	@button-colour: #333; // Change this colour to your desired button colour
+	background: @button-colour;
+	border-top: 1px solid lighten(@button-colour, 20%);
+	.border-radius(10000px);
+	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+	.box-shadow(@button-shadow);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
+	&:hover {
+		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:active {
+		@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
+		.box-shadow(@button-shadow);
+	}
+	&:after {
+		text-shadow:0 -1px 1px darken(@button-colour, 30%),0 1px 1px lighten(@button-colour, 50%);
+	}
+	&:before {
+		background: darken(@button-colour, 3%);
+		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
+		.box-shadow(@after-button-shadow);
+	}
+}
