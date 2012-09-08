@@ -1,4 +1,4 @@
-/*!
+/*
  * Name: CSS Button
  * Author: David Darnes
  * Author url: http://david.darn.es
@@ -47,7 +47,7 @@
           transform-origin: @x @y;
 }
 
-// This all the button structure and workings, doesn't need to be duplicated
+/* This all the button structure and workings, doesn't need to be duplicated */
 .button {
 	font: 16px Georgia, serif;
 	position: relative;
@@ -87,6 +87,7 @@
 }
 
 // Duplicate this class (including all its styles and pseudo elements) to make another colour. Then raname it to .button.twitter or something, along with the colour you want
+/* Regular CSS users can either change all the colours manually (which might take forever) or use the style.css file and reference the colour you want */
 .button {
 	@button-colour: #333; // Change this colour to your desired button colour
 	background: @button-colour;
