@@ -9,8 +9,45 @@
  * Additionally this is a work in progress, will improve as much as I can in my spare time.
  */
 
-@import "mixins.less";
+// Mixins stuff
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+       -o-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+.backface-visibility(@visibility) {
+  -webkit-backface-visibility: @visibility;
+	 -moz-backface-visibility: @visibility;
+	  -ms-backface-visibility: @visibility;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.transform-origin(@x, @y) {
+  -webkit-transform-origin: @x @y;
+     -moz-transform-origin: @x @y;
+      -ms-transform-origin: @x @y;
+       -o-transform-origin: @x @y;
+          transform-origin: @x @y;
+}
 
+// Page specific styling for example page
 body {
 	height: 100%;
 }
@@ -35,6 +72,7 @@ a:hover {
 	opacity: 1;
 }
 
+// This all the button structure and workings, doesn't need to be duplicated
 .button {
 	font: 16px Georgia, serif;
 	position: relative;
@@ -73,6 +111,9 @@ a:hover {
 	}
 }
 
+// Button colours, shows how to duplicate the button colour styling and giving it a different class and colour
+
+// Bright blue
 .button.twitter {
 	@button-colour: #0076be;
 	background: @button-colour;
@@ -100,6 +141,7 @@ a:hover {
 	}
 }
 
+// Navy blue
 .button.facebook {
 	@button-colour: #3b5998;
 	background: @button-colour;
@@ -127,6 +169,7 @@ a:hover {
 	}
 }
 
+// Hot pink
 .button.dribbble {
 	@button-colour: #df2d72;
 	background: @button-colour;
@@ -154,6 +197,7 @@ a:hover {
 	}
 }
 
+// Black
 .button.github {
 	@button-colour: #333;
 	background: @button-colour;
@@ -181,6 +225,7 @@ a:hover {
 	}
 }
 
+// Bright red
 .button.youtube {
 	@button-colour: #d80000;
 	background: @button-colour;
@@ -208,6 +253,7 @@ a:hover {
 	}
 }
 
+// Rich orange
 .button.google {
 	@button-colour: #cb4102;
 	background: @button-colour;
@@ -235,8 +281,7 @@ a:hover {
 	}
 }
 
-
-
+// Page specific styling for example page
 footer {
 	clear: both;
 	width: 600px;
