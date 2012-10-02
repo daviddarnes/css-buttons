@@ -46,6 +46,10 @@
        -o-transform-origin: @x @y;
           transform-origin: @x @y;
 }
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
 
 /* Page specific styling for example page */
 body {
@@ -57,29 +61,35 @@ section {
 	margin: 150px auto;
 }
 
-a {
+a.logo {
 	opacity: 0.3;
 	display: block;
 	position: absolute;
 	top: 20px;
 	left: 20px;
-	background: url('http://david.darn.es/wp-content/themes/david.darn.es/imgs/logo_gray.png');
+	background: url('logo.png');
+	background-size: 100% 100%;
 	width: 56px;
 	height: 57px;
 	.transition(all .2s ease-in-out);
+	&:hover {
+		opacity: 1;
+	}
 }
-a:hover {
-	opacity: 1;
-}
+
 
 /* This all the button structure and workings, doesn't need to be duplicated */
 .button {
 	font: 16px Georgia, serif;
+	color: #fff;
 	position: relative;
 	float: left;
 	margin: 58px;
 	height: 80px;
 	width: 80px;
+	.border-radius(10000px);
+	.transition(all .2s ease-in-out);
+	.transform-origin(50%, 100%);
 	&:hover {
 		.scale(1.1);
 	}
@@ -109,6 +119,32 @@ a:hover {
 		top: 15.5%;
 		left: 15.5%;
 	}
+	span {
+		padding: 10%;
+		display: block;
+		position: absolute;
+		width: 80%;
+		bottom: 110%;
+		font: 11px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		text-align: center;
+		.border-radius(3px);
+		.opacity(0);
+		.transition(all .2s ease-in-out);
+		&:after {
+			display: block;
+			content: "";
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			margin-left: -5px;
+			border-color: transparent;
+			border-style: solid;
+			border-width: 5px 5px 0;
+		}
+	}
+	&:hover span {
+		.opacity(80);
+	}
 }
 
 // Button colours, shows how to duplicate the button colour styling and giving it a different class and colour
@@ -119,11 +155,8 @@ a:hover {
 	@button-colour: #0076be;
 	background: @button-colour;
 	border-top: 1px solid lighten(@button-colour, 20%);
-	.border-radius(10000px);
 	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
-	.transition(all .2s ease-in-out);
-	.transform-origin(50%, 100%);
 	&:hover {
 		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 		.box-shadow(@button-shadow);
@@ -139,6 +172,13 @@ a:hover {
 		background: darken(@button-colour, 3%);
 		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
 		.box-shadow(@after-button-shadow);
+	}
+	span {
+		background: darken(@button-colour, 30%);
+		text-shadow: 0 1px 0 darken(@button-colour, 45%);
+		&:after {
+			border-top-color: darken(@button-colour, 30%);
+		}
 	}
 }
 
@@ -147,11 +187,8 @@ a:hover {
 	@button-colour: #3b5998;
 	background: @button-colour;
 	border-top: 1px solid lighten(@button-colour, 20%);
-	.border-radius(10000px);
 	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
-	.transition(all .2s ease-in-out);
-	.transform-origin(50%, 100%);
 	&:hover {
 		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 		.box-shadow(@button-shadow);
@@ -167,6 +204,13 @@ a:hover {
 		background: darken(@button-colour, 3%);
 		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
 		.box-shadow(@after-button-shadow);
+	}
+	span {
+		background: darken(@button-colour, 30%);
+		text-shadow: 0 1px 0 darken(@button-colour, 45%);
+		&:after {
+			border-top-color: darken(@button-colour, 30%);
+		}
 	}
 }
 
@@ -175,11 +219,8 @@ a:hover {
 	@button-colour: #df2d72;
 	background: @button-colour;
 	border-top: 1px solid lighten(@button-colour, 20%);
-	.border-radius(10000px);
 	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
-	.transition(all .2s ease-in-out);
-	.transform-origin(50%, 100%);
 	&:hover {
 		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 		.box-shadow(@button-shadow);
@@ -195,6 +236,13 @@ a:hover {
 		background: darken(@button-colour, 3%);
 		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
 		.box-shadow(@after-button-shadow);
+	}
+	span {
+		background: darken(@button-colour, 30%);
+		text-shadow: 0 1px 0 darken(@button-colour, 45%);
+		&:after {
+			border-top-color: darken(@button-colour, 30%);
+		}
 	}
 }
 
@@ -203,11 +251,8 @@ a:hover {
 	@button-colour: #333;
 	background: @button-colour;
 	border-top: 1px solid lighten(@button-colour, 20%);
-	.border-radius(10000px);
 	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
-	.transition(all .2s ease-in-out);
-	.transform-origin(50%, 100%);
 	&:hover {
 		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 		.box-shadow(@button-shadow);
@@ -223,6 +268,13 @@ a:hover {
 		background: darken(@button-colour, 3%);
 		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
 		.box-shadow(@after-button-shadow);
+	}
+	span {
+		background: darken(@button-colour, 30%);
+		text-shadow: 0 1px 0 darken(@button-colour, 45%);
+		&:after {
+			border-top-color: darken(@button-colour, 30%);
+		}
 	}
 }
 
@@ -231,11 +283,8 @@ a:hover {
 	@button-colour: #d80000;
 	background: @button-colour;
 	border-top: 1px solid lighten(@button-colour, 20%);
-	.border-radius(10000px);
 	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
-	.transition(all .2s ease-in-out);
-	.transform-origin(50%, 100%);
 	&:hover {
 		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 		.box-shadow(@button-shadow);
@@ -251,6 +300,13 @@ a:hover {
 		background: darken(@button-colour, 3%);
 		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
 		.box-shadow(@after-button-shadow);
+	}
+	span {
+		background: darken(@button-colour, 30%);
+		text-shadow: 0 1px 0 darken(@button-colour, 45%);
+		&:after {
+			border-top-color: darken(@button-colour, 30%);
+		}
 	}
 }
 
@@ -259,11 +315,8 @@ a:hover {
 	@button-colour: #cb4102;
 	background: @button-colour;
 	border-top: 1px solid lighten(@button-colour, 20%);
-	.border-radius(10000px);
 	@button-shadow:0 1px 3px rgba(0,0,0,0.8),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 	.box-shadow(@button-shadow);
-	.transition(all .2s ease-in-out);
-	.transform-origin(50%, 100%);
 	&:hover {
 		@button-shadow:0 2px 10px rgba(0,0,0,0.3),0 1px 1px fadeout(@button-colour, 70%),inset 0 2px 5px lighten(@button-colour, 30%),inset 0 -2px 5px darken(@button-colour, 20%), inset 0 -1px 2px fadeout(@button-colour, 10%);
 		.box-shadow(@button-shadow);
@@ -279,6 +332,13 @@ a:hover {
 		background: darken(@button-colour, 3%);
 		@after-button-shadow: 0 2px 5px lighten(@button-colour, 25%),0 -2px 5px darken(@button-colour, 25%),inset 0 -3px 3px darken(@button-colour, 5%),inset 0 1px 2px darken(@button-colour, 5%);
 		.box-shadow(@after-button-shadow);
+	}
+	span {
+		background: darken(@button-colour, 30%);
+		text-shadow: 0 1px 0 darken(@button-colour, 45%);
+		&:after {
+			border-top-color: darken(@button-colour, 30%);
+		}
 	}
 }
 
