@@ -138,3 +138,208 @@
 .button span:after {
   border-top-color: #000000;
 }
+/* CSS users can use these and just reference the class they want */
+/* Bright blue */
+.button.twitter {
+  background: #0076be;
+  border-top: 1px solid #25acff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+}
+.button.twitter:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+}
+.button.twitter:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(0, 118, 190, 0.30000000000000004), inset 0 2px 5px #58c0ff, inset 0 -2px 5px #003758, inset 0 -1px 2px rgba(0, 118, 190, 0.9);
+}
+.button.twitter:after {
+  text-shadow: 0 -1px 1px #001725, 0 1px 1px #bee6ff;
+}
+.button.twitter:before {
+  background: #006caf;
+  -webkit-box-shadow: 0 2px 5px #3fb6ff, 0 -2px 5px #00273f, inset 0 -3px 3px #0066a5, inset 0 1px 2px #0066a5;
+  -moz-box-shadow: 0 2px 5px #3fb6ff, 0 -2px 5px #00273f, inset 0 -3px 3px #0066a5, inset 0 1px 2px #0066a5;
+  box-shadow: 0 2px 5px #3fb6ff, 0 -2px 5px #00273f, inset 0 -3px 3px #0066a5, inset 0 1px 2px #0066a5;
+}
+.button.twitter span {
+  background: #001725;
+  text-shadow: 0 1px 0 #000000;
+}
+.button.twitter span:after {
+  border-top-color: #001725;
+}
+/* Navy blue */
+.button.facebook {
+  background: #3b5998;
+  border-top: 1px solid #718dc8;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+}
+.button.facebook:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+}
+.button.facebook:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(59, 89, 152, 0.30000000000000004), inset 0 2px 5px #96abd6, inset 0 -2px 5px #1e2e4f, inset 0 -1px 2px rgba(59, 89, 152, 0.9);
+}
+.button.facebook:after {
+  text-shadow: 0 -1px 1px #10182a, 0 1px 1px #dfe6f3;
+}
+.button.facebook:before {
+  background: #37538d;
+  -webkit-box-shadow: 0 2px 5px #839ccf, 0 -2px 5px #17233c, inset 0 -3px 3px #344e86, inset 0 1px 2px #344e86;
+  -moz-box-shadow: 0 2px 5px #839ccf, 0 -2px 5px #17233c, inset 0 -3px 3px #344e86, inset 0 1px 2px #344e86;
+  box-shadow: 0 2px 5px #839ccf, 0 -2px 5px #17233c, inset 0 -3px 3px #344e86, inset 0 1px 2px #344e86;
+}
+.button.facebook span {
+  background: #10182a;
+  text-shadow: 0 1px 0 #000000;
+}
+.button.facebook span:after {
+  border-top-color: #10182a;
+}
+/* Hot pink */
+.button.dribbble {
+  background: #df2d72;
+  border-top: 1px solid #ec86ad;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+}
+.button.dribbble:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+}
+.button.dribbble:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(223, 45, 114, 0.30000000000000004), inset 0 2px 5px #f3b2cb, inset 0 -2px 5px #901645, inset 0 -1px 2px rgba(223, 45, 114, 0.9);
+}
+.button.dribbble:after {
+  text-shadow: 0 -1px 1px #640f30, 0 1px 1px #ffffff;
+}
+.button.dribbble:before {
+  background: #db2169;
+  -webkit-box-shadow: 0 2px 5px #f09cbc, 0 -2px 5px #7a133b, inset 0 -3px 3px #d22065, inset 0 1px 2px #d22065;
+  -moz-box-shadow: 0 2px 5px #f09cbc, 0 -2px 5px #7a133b, inset 0 -3px 3px #d22065, inset 0 1px 2px #d22065;
+  box-shadow: 0 2px 5px #f09cbc, 0 -2px 5px #7a133b, inset 0 -3px 3px #d22065, inset 0 1px 2px #d22065;
+}
+.button.dribbble span {
+  background: #640f30;
+  text-shadow: 0 1px 0 #210510;
+}
+.button.dribbble span:after {
+  border-top-color: #640f30;
+}
+/* Black */
+.button.github {
+  background: #333333;
+  border-top: 1px solid #666666;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+}
+.button.github:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+}
+.button.github:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(51, 51, 51, 0.30000000000000004), inset 0 2px 5px #808080, inset 0 -2px 5px #000000, inset 0 -1px 2px rgba(51, 51, 51, 0.9);
+}
+.button.github:after {
+  text-shadow: 0 -1px 1px #000000, 0 1px 1px #b3b3b3;
+}
+.button.github:before {
+  background: #2b2b2b;
+  -webkit-box-shadow: 0 2px 5px #737373, 0 -2px 5px #000000, inset 0 -3px 3px #262626, inset 0 1px 2px #262626;
+  -moz-box-shadow: 0 2px 5px #737373, 0 -2px 5px #000000, inset 0 -3px 3px #262626, inset 0 1px 2px #262626;
+  box-shadow: 0 2px 5px #737373, 0 -2px 5px #000000, inset 0 -3px 3px #262626, inset 0 1px 2px #262626;
+}
+.button.github span {
+  background: #000000;
+  text-shadow: 0 1px 0 #000000;
+}
+.button.github span:after {
+  border-top-color: #000000;
+}
+/* Bright red */
+.button.youtube {
+  background: #d80000;
+  border-top: 1px solid #ff3f3f;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+}
+.button.youtube:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+}
+.button.youtube:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(216, 0, 0, 0.30000000000000004), inset 0 2px 5px #ff7272, inset 0 -2px 5px #720000, inset 0 -1px 2px rgba(216, 0, 0, 0.9);
+}
+.button.youtube:after {
+  text-shadow: 0 -1px 1px #3f0000, 0 1px 1px #ffd8d8;
+}
+.button.youtube:before {
+  background: #c90000;
+  -webkit-box-shadow: 0 2px 5px #ff5959, 0 -2px 5px #590000, inset 0 -3px 3px #bf0000, inset 0 1px 2px #bf0000;
+  -moz-box-shadow: 0 2px 5px #ff5959, 0 -2px 5px #590000, inset 0 -3px 3px #bf0000, inset 0 1px 2px #bf0000;
+  box-shadow: 0 2px 5px #ff5959, 0 -2px 5px #590000, inset 0 -3px 3px #bf0000, inset 0 1px 2px #bf0000;
+}
+.button.youtube span {
+  background: #3f0000;
+  text-shadow: 0 1px 0 #000000;
+}
+.button.youtube span:after {
+  border-top-color: #3f0000;
+}
+/* Rich orange */
+.button.google {
+  background: #cb4102;
+  border-top: 1px solid #fd7436;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+}
+.button.google:hover {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+}
+.button.google:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(203, 65, 2, 0.30000000000000004), inset 0 2px 5px #fe9768, inset 0 -2px 5px #662101, inset 0 -1px 2px rgba(203, 65, 2, 0.9);
+}
+.button.google:after {
+  text-shadow: 0 -1px 1px #331001, 0 1px 1px #ffddcd;
+}
+.button.google:before {
+  background: #bc3c02;
+  -webkit-box-shadow: 0 2px 5px #fd864f, 0 -2px 5px #4d1901, inset 0 -3px 3px #b23902, inset 0 1px 2px #b23902;
+  -moz-box-shadow: 0 2px 5px #fd864f, 0 -2px 5px #4d1901, inset 0 -3px 3px #b23902, inset 0 1px 2px #b23902;
+  box-shadow: 0 2px 5px #fd864f, 0 -2px 5px #4d1901, inset 0 -3px 3px #b23902, inset 0 1px 2px #b23902;
+}
+.button.google span {
+  background: #331001;
+  text-shadow: 0 1px 0 #000000;
+}
+.button.google span:after {
+  border-top-color: #331001;
+}

@@ -1,12 +1,48 @@
 <!DOCTYPE HTML>
-<link rel="stylesheet" href="style.css" type="text/css" media="screen">
 <html itemscope itemtype="http://schema.org/CSS3 Demo">
 	<head>
 		<title>Sexy CSS Button</title>
 		<meta itemprop="name" content="Sexy CSS Button">
 		<meta itemprop="description" content="A sexy button using just CSS">
 		<meta itemprop="image" content="button.jpg">
+		<link rel="stylesheet" href="button.css" type="text/css" media="screen">
 	</head>
+	<style>
+		/* Page specific styling for example */
+		body {
+			height: 100%;
+		}
+
+		section {
+			width: 600px;
+			margin: 150px auto;
+		}
+
+		a.logo {
+			opacity: 0.3;
+			display: block;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			background: url('../logo.png');
+			background-size: 100% 100%;
+			width: 56px;
+			height: 57px;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		a.logo:hover {
+			opacity: 1;
+		}
+		footer {
+			clear: both;
+			padding-top: 30px;
+			padding-left: 30px;
+			text-align: center;
+		}
+	</style>
 	<body>
 		<a class="logo" href="http://david.darn.es" title="David Darnes - Designer"></a>
 		<a href="https://github.com/daviddarnes/css-buttons"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
