@@ -5,7 +5,7 @@ CSS Buttons
 
 Literally a CSS (and less) file to allow you to turn a simple div into a shiny button you'd find on you grandmothers favourite cardigan.
 
-Take a look at the examples on my [experiments page](http://david.darn.es/experiment/button/).
+[Demo page](http://daviddarnes.github.io/css-buttons/).
 
 ### Usage
 Just [download this repo](https://github.com/daviddarnes/css-buttons/archive/master.zip), copy the [css file](https://github.com/daviddarnes/css-buttons/blob/master/button.css) into your project, and link it like any other css file. 
